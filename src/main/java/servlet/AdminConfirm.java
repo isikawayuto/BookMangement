@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import dto.Account;
+import dto.Admin;
 
 /**
  * Servlet implementation class AdminConform
@@ -39,7 +39,7 @@ public class AdminConfirm extends HttpServlet {
 		String pw = request.getParameter("pw");
 		
 		
-		Account ac = new Account(mail, name, null, pw);
+		Admin ac = new Admin(mail, name, null, pw);
 			
 		HttpSession session = request.getSession();
 			

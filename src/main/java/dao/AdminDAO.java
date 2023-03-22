@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import dto.Account;
+import dto.Admin;
 import util.GenerateHashedPw;
 import util.GenerateSalt;
 
@@ -28,7 +28,7 @@ public class AdminDAO {
 	    return DriverManager.getConnection(dbUrl, username, password);
 	}
 	
-	public static int registerAccount(Account ac){
+	public static int registerAccount(Admin ac){
 		String sql = "INSERT INTO admin VALUES(?, ?, ?, ?)";
 		int result = 0;
 		
@@ -84,7 +84,7 @@ public class AdminDAO {
 	}
 	
 	// ログイン処理
-	public static Account login(String mail, String hashedPw) {
+	public static Admin login(String mail, String hashedPw) {
 		String sql = "SELECT * FROM admin WHERE mail = ? AND password = ?";
 		
 		try (
@@ -100,7 +100,7 @@ public class AdminDAO {
 					String name = rs.getString("name");
 					String salt = rs.getString("salt");
 					
-					return new Account(mail, name, salt, hashedPw);
+					return new Admin(mail, name, salt, hashedPw);
 				}
 			}
 		} catch (SQLException e) {
