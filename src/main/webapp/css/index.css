@@ -1,0 +1,14 @@
+@charset "UTF-8";
+h1{
+	text-align: center;
+}
+.link {
+	margin-top: 50px;
+	font-size: 20px;
+	text-align: center;
+}
+a{
+	padding-bottom: 30px;
+}
+
+
