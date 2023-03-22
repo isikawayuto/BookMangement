@@ -1,15 +1,15 @@
 package dto;
 
-public class Account {
-	private String mail;
+public class Admin {
+	private String email;
 	private String name;
 	private String salt;
 	private String password;
 	
-	public Account(String mail, String name, String salt, String password) {
+	public Admin(String mail, String name, String salt, String password) {
 		super();
 		this.name = name;
-		this.mail = mail;
+		this.email = mail;
 		this.salt = salt;
 		this.password = password;
 	}
@@ -23,11 +23,11 @@ public class Account {
 	}
 
 	public String getMail() {
-		return mail;
+		return email;
 	}
 
 	public void setMail(String mail) {
-		this.mail = mail;
+		this.email = mail;
 	}
 
 	public String getSalt() {
