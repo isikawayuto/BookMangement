@@ -7,13 +7,13 @@ public class Book {
 	private String title;
 	private String author;
 	private String publisher;
-	private String new_old;
+	private boolean new_old;
 	private String title_kana;
 	private String author_kana;
 	
 	
 	public Book(String book_id, String isbn, int genre_id, String title, String author, String publisher,
-			String new_old, String title_kana, String author_kana) {
+			boolean new_old, String title_kana, String author_kana) {
 		super();
 		this.book_id = book_id;
 		this.isbn = isbn;
@@ -62,10 +62,10 @@ public class Book {
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
-	public String getNew_old() {
+	public boolean getNew_old() {
 		return new_old;
 	}
-	public void setNew_old(String new_old) {
+	public void setNew_old(boolean new_old) {
 		this.new_old = new_old;
 	}
 	public String getTitle_kana() {

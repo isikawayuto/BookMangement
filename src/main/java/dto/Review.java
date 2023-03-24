@@ -2,7 +2,7 @@ package dto;
 import java.time.LocalDateTime;
 
 public class Review {
-	private String review_id;
+	private int review_id;
 	private String isbn;
 	private String email;
 	private String comment;
@@ -10,7 +10,7 @@ public class Review {
 	private boolean view_flag;
 	private LocalDateTime created_at;
 	
-	public Review(String review_id, String isbn, String email, String comment, int point, boolean view_flag,
+	public Review(int review_id, String isbn, String email, String comment, int point, boolean view_flag,
 			LocalDateTime created_at) {
 		super();
 		this.review_id = review_id;
@@ -23,11 +23,11 @@ public class Review {
 	}
 	
 	
-	public String getReview_id() {
+	public int getReview_id() {
 		return review_id;
 	}
 
-	public void setReview_id(String review_id) {
+	public void setReview_id(int review_id) {
 		this.review_id = review_id;
 	}
 
