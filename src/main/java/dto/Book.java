@@ -1,7 +1,7 @@
 package dto;
 
 public class Book {
-	private String book_id;
+	private int book_id;
 	private String isbn;
 	private int genre_id;
 	private String title;
@@ -12,8 +12,8 @@ public class Book {
 	private String author_kana;
 	
 	
-	public Book(String book_id, String isbn, int genre_id, String title, String author, String publisher,
-			boolean new_old, String title_kana, String author_kana) {
+	public Book(int book_id, String isbn, int genre_id, String title, String author, String publisher,
+			String new_old, String title_kana, String author_kana) {
 		super();
 		this.book_id = book_id;
 		this.isbn = isbn;
@@ -26,10 +26,10 @@ public class Book {
 		this.author_kana = author_kana;
 	}
 	
-	public String getBook_id() {
+	public int getBook_id() {
 		return book_id;
 	}
-	public void setBook_id(String book_id) {
+	public void setBook_id(int book_id) {
 		this.book_id = book_id;
 	}
 	public String getIsbn() {
