@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.AdminDAO;
-import dto.Account;
+import dto.Admin;
 import util.GenerateHashedPw;
 
 /**
@@ -55,7 +55,7 @@ public class AdminTOP extends HttpServlet {
 		System.out.println("ログインチェックのハッシュPWは"+hashedPw);
 		
 		// 入力されたID、ハッシュしたPWに一致するユーザを検索する
-		Account account = AdminDAO.login(mail, hashedPw);
+		Admin account = AdminDAO.login(mail, hashedPw);
 		
 		// 一致するユーザがいなければ、ログイン失敗
 		if(account == null) {

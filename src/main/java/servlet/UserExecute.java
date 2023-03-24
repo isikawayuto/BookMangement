@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import dao.UserDAO;
-import dto.Account;
+import dto.Admin;
 
 /**
  * Servlet implementation class UserExecute
@@ -35,7 +35,7 @@ public class UserExecute extends HttpServlet {
 		HttpSession session = request.getSession();
 
 		// 入力データの取得
-		Account account = (Account)session.getAttribute("User");
+		Admin account = (Admin)session.getAttribute("User");
 		
 		// 登録処理
 		int result = UserDAO.registerAccount(account);
