@@ -1,0 +1,63 @@
+@charset "UTF-8";body {
+  font-family: Arial, sans-serif;
+  background-color: #F7F9FA;
+  color: #333;
+}
+
+header {
+  background-color: #0072C6;
+  color: #FFF;
+  padding: 10px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav a:hover {
+  color: #E4E4E4;
+}
+
+main {
+  margin: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.review {
+  background-color: #FFF;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.review h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.review p {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.author {
+  text-align: right;
+  font-style: italic;
+  }
