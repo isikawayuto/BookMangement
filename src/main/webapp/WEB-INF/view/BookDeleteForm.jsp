@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/BookDeleteForm.css">
 </head>
 <body>
 <% 
@@ -12,23 +13,39 @@
 		if(error != null){
 			
 	%>
+	<div class="error-message">
 		<p style="color:red">削除に失敗しました。</p>
-		<h2>図書削除</h2>
-		<form action="DeleteBookConfirm" method="post">
-			ISBN：<input type="text" name="isbn" value="<%=request.getParameter("isbn") %>"><br>
-			本ID：<input type="text" name="book_id" value="<%=request.getParameter("book_id") %>"><br>
-		<input type="submit" value="確認">
+	</div>
+		<h2 class="title">図書削除</h2>
+		<form  class="from-prace" action="DeleteBookConfirm" method="post">
+		<table>
+			<tr>
+				<td id="name">ISBN：</td><td><input type="text" id=input-size size="70" name="isbn" value="<%=request.getParameter("isbn") %>"></td>
+			</tr>
+			<tr>
+				<td id="name">本ID：</td><td><input type="text" id=input-size size="70" name="book_id" value="<%=request.getParameter("book_id") %>"></td>
+			</tr>
+		</table>
+			<input id="button" type="submit" value="確認">
 	</form>
 		<a href="AdminTOP">戻る</a>
 	<%	
 		} else {
 	%>
-	<h2>図書削除</h2>
-	<form action="DeleteBookConfirm" method="post">
-		ISBN：<input type="text" name="isbn"><br>
-		本ID：<input type="text" name="book_id"><br>
-		<input type="submit" value="確認">
+		<h2 class="title">図書削除</h2>
+	<div>
+		<form class="from-prace" action="DeleteBookConfirm" method="post">
+		<table>
+			<tr class="form-interval">
+				<td id="name">ISBN：</td><td><input type="text" id=input-size size="70" name="isbn"></td>
+			</tr>
+			<tr class="form-interval">
+			 	<td id="name">本ID：</td><td><input type="text" id=input-size size="70" name="book_id"></td>
+			</tr>
+		</table>	
+		<input id="button" type="submit" value="確認">
 	</form>
+	</div>
 	<a href="AdminTOP">戻る</a>
 	<% } %>
 </body>

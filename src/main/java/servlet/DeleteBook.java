@@ -31,18 +31,6 @@ public class DeleteBook extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//処理の始めにログイン状態のチェックを行う。
-		HttpSession session = request.getSession();
-		Book book = (Book)session.getAttribute("admin");
-
-		if(book == null){
-			//セッションの中身がnullであれば不正アクセスと判断し
-			//ログイン画面へ戻る
-			String view = "./";
-			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
-			dispatcher.forward(request, response);
-			return;
-		}
 		String view = "WEB-INF/view/BookDeleteForm.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);
