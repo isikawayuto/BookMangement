@@ -20,7 +20,7 @@
 	<p>新書or旧書:<%=book.getNew_old() %></p><br>
 	<p>書名ヨミ:<%=book.getTitle_kana() %></p><br>
 	<p>著名ヨミ:<%=book.getAuthor_kana() %></p><br>
-	<a href="DeleteBookExecute">削除</a>
+	<a href="DeleteBookExecute">削除</a><br>
 	<a href="AdminTOP">戻る</a>
 </body>
 </html>

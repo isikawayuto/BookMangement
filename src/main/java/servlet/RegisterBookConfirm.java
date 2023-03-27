@@ -38,11 +38,12 @@ public class RegisterBookConfirm extends HttpServlet {
 		String author = request.getParameter("author");
 		String isbn = request.getParameter("isbn");
 		String publisher = request.getParameter("publisher");
-		String new_old = request.getParameter("new_old");
+		String new_oldStr = request.getParameter("new_old");
 		String title_kana = request.getParameter("title_kana");
 		String author_kana = request.getParameter("author_kana");
 		
 		int genre_id = Integer.parseInt(genre_idStr);
+		boolean new_old = Boolean.parseBoolean(new_oldStr);
 		
 		Book book = new Book(-1, isbn, genre_id, title, author, publisher, new_old, title_kana, author_kana);
 		

@@ -13,7 +13,7 @@ public class Book {
 	
 	
 	public Book(int book_id, String isbn, int genre_id, String title, String author, String publisher,
-			String new_old, String title_kana, String author_kana) {
+			boolean new_old, String title_kana, String author_kana) {
 		super();
 		this.book_id = book_id;
 		this.isbn = isbn;
