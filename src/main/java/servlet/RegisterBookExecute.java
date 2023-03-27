@@ -41,15 +41,16 @@ public class RegisterBookExecute extends HttpServlet {
 		// 登録処理
 		int result =AdminBookDAO.registerBook(book);
 		
-		String path = "";
 		if(result == 1) {
-			path = "WEB-INF/view/BookRegisterSuccess.jsp";
+			String view = "WEB-INF/view/BookRegisterSuccess.jsp";
+			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
+			dispatcher.forward(request, response);
 		} else {
 			// 失敗した場合はパラメータ付きで登録画面に戻す
-			path = "WEB-INF/view/BookRegisterForm.jsp?error=1";
+			String view = "WEB-INF/view/BookRegisterForm.jsp?error=1";
+			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
+			dispatcher.forward(request, response);
 		}
-		RequestDispatcher dispatcher = request.getRequestDispatcher(path);
-		dispatcher.forward(request, response);
 	}
 
 	/**

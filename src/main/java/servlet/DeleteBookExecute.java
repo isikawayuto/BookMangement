@@ -8,7 +8,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import dao.AdminBookDAO;
 import dto.Book;
@@ -33,19 +32,6 @@ public class DeleteBookExecute extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
-		
-		//処理の始めにログイン状態のチェックを行う。
-		HttpSession session = request.getSession();
-		Book book = (Book)session.getAttribute("admin");
-
-		if(book == null){
-			//セッションの中身がnullであれば不正アクセスと判断し
-			//ログイン画面へ戻る
-			String view = "./";
-			RequestDispatcher dispatcher = request.getRequestDispatcher(view);
-			dispatcher.forward(request, response);
-			return;
-		}
 		
 		// フォーム入力内容の取得
 		String genre_idStr = request.getParameter("genre_id");
