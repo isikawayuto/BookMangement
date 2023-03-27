@@ -17,9 +17,10 @@
 		<form action="RegisterBookConfirm" method="post">
 			<p>ジャンル：
 			<select name="genre_id">
-			<option>アドベンチャー</option>
-			<option>ミステリー</option>
-			<option>ファンタジー</option>
+			<option value="1">指定なし</option>
+			<option value="2">アドベンチャー</option>
+			<option value="3">ミステリー</option>
+			<option value="4">ファンタジー</option>
 			</select></p>
 			タイトル：<input type="text" name="title" value="<%=request.getParameter("title") %>"><br>
 			著者名：<input type="text" name="author" value="<%=request.getParameter("author") %>"><br>
