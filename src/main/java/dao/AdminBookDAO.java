@@ -38,7 +38,7 @@ public class AdminBookDAO {
 			pstmt.setString(3, bo.getTitle());
 			pstmt.setString(4, bo.getAuthor());
 			pstmt.setString(5, bo.getPublisher());
-			pstmt.setString(6, bo.getNew_old());
+			pstmt.setBoolean(6, bo.getNew_old());
 			pstmt.setString(7, bo.getTitle_kana());
 			pstmt.setString(8, bo.getAuthor_kana());
 			
