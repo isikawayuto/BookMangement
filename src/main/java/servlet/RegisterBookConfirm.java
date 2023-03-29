@@ -55,7 +55,7 @@ public class RegisterBookConfirm extends HttpServlet {
 		// 第2引数：保存する値
 		session.setAttribute("input_data", book);
 		
-		String view = "WEB-INF/view/BookDeleteConfirm.jsp";
+		String view = "WEB-INF/view/BookRegisterConfirm.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(view);
 		dispatcher.forward(request, response);
 	}

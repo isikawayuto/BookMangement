@@ -12,14 +12,14 @@
 	<%
 		Book book = (Book)session.getAttribute("input_data");
 	%>
-	<p style="color:black">ジャンル：<%=book.getGenre_id() %></p><br>
-	<p>タイトル:<%=book.getTitle() %><p><br>
-	<p>著者名:<%=book.getAuthor() %></p><br>
-	<p>ISBN:<%=book.getIsbn() %></p><br>
-	<p>出版社:<%=book.getPublisher() %></p><br>
-	<p>新書or旧書:<%=book.getNew_old() %></p><br>
-	<p>書名ヨミ:<%=book.getTitle_kana() %></p><br>
-	<p>著名ヨミ:<%=book.getAuthor_kana() %></p><br>
+	<p style="color:black">ジャンル：<%=book.getGenre_id() %></p>
+	<p>タイトル:<%=book.getTitle() %><p>
+	<p>著者名:<%=book.getAuthor() %></p>
+	<p>ISBN:<%=book.getIsbn() %></p>
+	<p>出版社:<%=book.getPublisher() %></p>
+	<p>新書or旧書:<%=book.getNew_old() %></p>
+	<p>書名ヨミ:<%=book.getTitle_kana() %></p>
+	<p>著名ヨミ:<%=book.getAuthor_kana() %></p>
 	<a href="DeleteBookExecute">削除</a><br>
 	<a href="AdminTOP">戻る</a>
 </body>
