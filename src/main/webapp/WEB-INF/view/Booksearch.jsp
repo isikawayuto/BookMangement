@@ -34,8 +34,8 @@
   					<option value="5"></option>
   					<option value="6"></option>
 					</select>
-					<td id="title">新書</td><td><input type="radio" id=input-size size="50" name="新書"></td>
-					<td id="title">旧書</td><td><input type="radio" id=input-size size="50" name="旧書"></td>
+					<td id="title">新書</td><td><input type="radio" id=input-size size="50" name="judge" value="new"></td>
+					<td id="title">旧書</td><td><input type="radio" id=input-size size="50" name="judge" value="old"></td>
 					
 					</tr>
 						

@@ -4,14 +4,14 @@ import java.time.LocalDate;
 
 public class Lending {
 	
-	private String lending_id;
+	private int lending_id;
 	private String email;
 	private int book_id;
 	private LocalDate lending_date;
 	private LocalDate deadline;
 	private LocalDate return_date;
 	
-	public Lending(String lending_id, String email, int book_id, LocalDate lending_date, LocalDate deadline,
+	public Lending(int lending_id, String email, int book_id, LocalDate lending_date, LocalDate deadline,
 			LocalDate return_date) {
 		super();
 		this.lending_id = lending_id;
@@ -22,11 +22,11 @@ public class Lending {
 		this.return_date = return_date;
 	}
 
-	public String getLending_id() {
+	public int getLending_id() {
 		return lending_id;
 	}
 
-	public void setLending_id(String lending_id) {
+	public void setLending_id(int lending_id) {
 		this.lending_id = lending_id;
 	}
 

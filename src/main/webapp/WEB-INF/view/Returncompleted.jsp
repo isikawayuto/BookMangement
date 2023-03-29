@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>貸出完了画面</title>
-<link rel="stylesheet" href="css/Loancompleted.css">
+<title>返却完了画面</title>
+<link rel="stylesheet" href="css/Returncompleted.css">
 </head>
 <body>
-<h1>貸出完了画面</h1>
+<h1>返却完了画面</h1>
 <h3>利用者：</h3>
 <table border="1">
 <tr>
@@ -42,7 +42,7 @@
 </tr>
 </table>
 <p>貸出日： 返却期限：</p> 
-<h2 class="red">上記の内容の図書を貸出しました。</h2>
+<h2 class="red">上記の内容の図書を返却しました。</h2>
 <button type="button" onclick="location.href='UserTOP'">利用者情報TOPへ</button>
 
 

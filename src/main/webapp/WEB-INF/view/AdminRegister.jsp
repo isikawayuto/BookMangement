@@ -1,4 +1,4 @@
-<%@page import="dto.Account"%>
+<%@page import="dto.Admin"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="title-container">
-	<button type="button" onclick="location.href='UserLogin'" class="title-button">戻る</button>
+	<button type="button" onclick="location.href='AdminLogin'" class="title-button">戻る</button>
 	<h1 class="title">登録画面</h1>
 </div>
 	<%
@@ -20,10 +20,10 @@
 		String Code = (String)session.getAttribute("Code");
 		String errorCode = request.getParameter("error");
 		if(errorCode != null && errorCode.equals("1")){
-			Account ac = (Account)session.getAttribute("Admin");
+			Admin ac = (Admin)session.getAttribute("Admin");
 	%>
 		<p style="color:red" class="error-message">登録に失敗しました。</p>
-		<form action="UserConfirm" method="post">
+		<form action="AdminConfirm" method="post">
 			<table class="table">
 				<tr class="form-interval">
 					<td class="form-name"><h3>メール：</h3></td><td><input type="email" name="mail" class="form" value="<%=ac.getMail()%>"></td>
@@ -42,7 +42,7 @@
 	<%
 		} else {
 	%>
-		<form action="UserConfirm" method="post">
+		<form action="AdminConfirm" method="post">
 			<table class="table">
 				<tr class="form-interval">
 					<td class="form-name"><h3>メール：</h3></td><td><input type="email" name="mail" class="form"></td>
