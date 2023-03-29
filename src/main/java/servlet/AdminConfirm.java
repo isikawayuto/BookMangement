@@ -10,11 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import dao.AdminDAO;
 import dto.Admin;
+import util.GenerateHashedPw;
 
 /**
  * Servlet implementation class AdminConform
  */
+@SuppressWarnings("unused")
 @WebServlet("/AdminConfirm")
 public class AdminConfirm extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -59,3 +62,5 @@ public class AdminConfirm extends HttpServlet {
 	}
 
 }
+
+

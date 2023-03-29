@@ -1,4 +1,4 @@
-<%@page import="dto.Account"%>
+<%@page import="dto.Users"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 </head>
 <body>
 	<%
-		Account ac = (Account)session.getAttribute("User");
+		Users ac = (Users)session.getAttribute("User");
 	%>
 	<h1 class="title">登録確認画面</h1>
 	<table>

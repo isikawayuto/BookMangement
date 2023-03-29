@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.AdminDAO;
+import dto.Admin;
+import util.GenerateHashedPw;
+
 /**
  * Servlet implementation class AdminRegister
  */
