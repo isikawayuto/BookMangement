@@ -20,10 +20,10 @@
 		<form  class="from-prace" action="DeleteBookConfirm" method="post">
 		<table>
 			<tr>
-				<td id="name">ISBN：</td><td><input type="text" id=input-size size="70" name="isbn" value="<%=request.getParameter("isbn") %>"></td>
+				<td id="name">本ID：</td><td><input type="text" id=input-size size="70" name="book_id" value="<%=request.getParameter("book_id") %>"></td>
 			</tr>
 			<tr>
-				<td id="name">本ID：</td><td><input type="text" id=input-size size="70" name="book_id" value="<%=request.getParameter("book_id") %>"></td>
+				<td id="name">ISBN：</td><td><input type="text" id=input-size size="70" name="isbn" value="<%=request.getParameter("isbn") %>"></td>
 			</tr>
 		</table>
 			<input id="button" type="submit" value="確認">
@@ -37,10 +37,10 @@
 		<form class="from-prace" action="DeleteBookConfirm" method="post">
 		<table>
 			<tr class="form-interval">
-				<td id="name">ISBN：</td><td><input type="text" id=input-size size="70" name="isbn"></td>
+			 	<td id="name">本ID：</td><td><input type="text" id=input-size size="70" name="book_id"></td>
 			</tr>
 			<tr class="form-interval">
-			 	<td id="name">本ID：</td><td><input type="text" id=input-size size="70" name="book_id"></td>
+				<td id="name">ISBN：</td><td><input type="text" id=input-size size="70" name="isbn"></td>
 			</tr>
 		</table>	
 		<input id="button" type="submit" value="確認">

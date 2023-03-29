@@ -33,10 +33,10 @@ public class DeleteBookConfirm extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		
+		String isbn = request.getParameter("isbn");
 		String genre_idStr = request.getParameter("genre_id");
 		String title = request.getParameter("title");
 		String author = request.getParameter("author");
-		String isbn = request.getParameter("isbn");
 		String publisher = request.getParameter("publisher");
 		String new_oldStr = request.getParameter("new_old");
 		String title_kana = request.getParameter("title_kana");

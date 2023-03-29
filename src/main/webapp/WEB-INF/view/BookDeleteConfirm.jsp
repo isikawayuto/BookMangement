@@ -8,18 +8,28 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p style="color:red">この内容の図書を削除しますか。</p>
 	<%
-		Book book = (Book)session.getAttribute("input_data");
+	request.setCharacterEncoding("UTF-8");
+	String isbn = request.getParameter("isbn");
+	String genre_id = request.getParameter("genre_id");
+	int genre_idStr = Integer.parseInt(genre_id);
+	String title = request.getParameter("title");
+	String author = request.getParameter("author");
+	String publisher = request.getParameter("publisher");
+	String new_old = request.getParameter("new_old");
+	boolean new_oldStr = Boolean.parseBoolean(new_old);
+	String title_kana = request.getParameter("title_kana");
+	String author_kana = request.getParameter("author_kana");
 	%>
-	<p style="color:black">ジャンル：<%=book.getGenre_id() %></p>
-	<p>タイトル:<%=book.getTitle() %><p>
-	<p>著者名:<%=book.getAuthor() %></p>
-	<p>ISBN:<%=book.getIsbn() %></p>
-	<p>出版社:<%=book.getPublisher() %></p>
-	<p>新書or旧書:<%=book.getNew_old() %></p>
-	<p>書名ヨミ:<%=book.getTitle_kana() %></p>
-	<p>著名ヨミ:<%=book.getAuthor_kana() %></p>
+	<p style="color:red">この内容の図書を削除しますか。</p>
+	<p style="color:black">ISBN:<%=isbn %></p>
+	<p>ジャンル：<%=genre_id %></p>
+	<p>タイトル:<%=title %><p>
+	<p>著者名:<%=author %></p>
+	<p>出版社:<%=publisher %></p>
+	<p>新書or旧書:<%=new_old %></p>
+	<p>書名ヨミ:<%=title_kana %></p>
+	<p>著名ヨミ:<%=author_kana %></p>
 	<a href="DeleteBookExecute">削除</a><br>
 	<a href="AdminTOP">戻る</a>
 </body>

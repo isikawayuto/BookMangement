@@ -34,10 +34,10 @@ public class DeleteBookExecute extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		// フォーム入力内容の取得
+		String isbn = request.getParameter("isbn");
 		String genre_idStr = request.getParameter("genre_id");
 		String title = request.getParameter("title");
 		String author = request.getParameter("author");
-		String isbn = request.getParameter("isbn");
 		String publisher = request.getParameter("publisher");
 		String new_oldStr = request.getParameter("new_old");
 		String title_kana = request.getParameter("title_kana");

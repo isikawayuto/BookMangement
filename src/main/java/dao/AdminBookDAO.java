@@ -5,7 +5,10 @@ import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import dto.Book;
 
@@ -56,7 +59,7 @@ public class AdminBookDAO {
 
 	public static int deleteBook(Book bo) {
 		
-		String sql = "DELETE FROM book WHERE isbn = ? AND book_id = ?";
+		String sql = "DELETE FROM book WHERE book_id = ? AND isbn = ?";
 
 		// return用の変数
 		int result = 0;
@@ -66,8 +69,8 @@ public class AdminBookDAO {
 				PreparedStatement pstmt = con.prepareStatement(sql);			// 構文解析
 				){
 
-			pstmt.setString(1, bo.getIsbn());
-			pstmt.setInt(2, bo.getBook_id());
+			pstmt.setInt(1, bo.getBook_id());
+			pstmt.setString(2, bo.getIsbn());
 		
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
@@ -78,6 +81,42 @@ public class AdminBookDAO {
 		} finally {
 			System.out.println(result + "件削除しました。");
 		}
+		return result;
+	}
+	public static List<Book> selectBook() {
+		
+		// 返却用変数
+		List<Book> result = new ArrayList<>();
+
+		String sql = "SELECT * FROM book";
+		
+		try (
+				Connection con = getConnection();
+				PreparedStatement pstmt = con.prepareStatement(sql);
+				){
+			try (ResultSet rs = pstmt.executeQuery()){
+				while(rs.next()) {
+					String isbn = rs.getString("isbn");
+					int genre_id = rs.getInt("genre_id");
+					String title = rs.getString("title");
+					String author = rs.getString("author");
+					String publisher = rs.getString("publisher");
+					boolean new_old = rs.getBoolean("new_old");
+					String title_kana = rs.getString("title_kana");
+					String author_kana = rs.getString("author_kana");
+					Book book = new Book(-1, isbn, genre_id, title, author, publisher, new_old, title_kana, author_kana);
+					
+					result.add(book);
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (Throwable e1) {
+			// TODO 自動生成された catch ブロック
+			e1.printStackTrace();
+		}
+
+		// Listを返却する。0件の場合は空のListが返却される。
 		return result;
 	}
 	
