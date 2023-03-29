@@ -1,4 +1,4 @@
-<%@page import="dto.Account"%>
+<%@page import="dto.Users"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,7 +18,7 @@
 		String Code = (String)session.getAttribute("Code");
 		String errorCode = request.getParameter("error");
 		if(errorCode != null && errorCode.equals("1")){
-			Account ac = (Account)session.getAttribute("User");
+			Users ac = (Users)session.getAttribute("User");
 	%>
 		<p style="color:red" class="error-message">登録に失敗しました。</p>
 		<form action="UserConfirm" method="post">
