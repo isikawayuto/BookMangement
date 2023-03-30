@@ -12,6 +12,6 @@
 	<h1>登録完了！！</h1>
 	<h3>登録が完了しました。</h3>
 	<h3>下記よりログインしてください。</h3>
-	<button type="button" onclick="location.href='UserLogin'" class="button">TOPへ</button>
+	<button type="button" onclick="location.href='AdminLogin'" class="button">TOPへ</button>
 </body>
 </html>

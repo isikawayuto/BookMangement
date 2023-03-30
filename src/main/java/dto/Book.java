@@ -1,7 +1,9 @@
 package dto;
 
 public class Book {
-	private int book_id;
+
+	private int id;
+
 	private String isbn;
 	private int genre_id;
 	private String title;
@@ -12,10 +14,11 @@ public class Book {
 	private String author_kana;
 	
 	
+
 	public Book(int book_id, String isbn, int genre_id, String title, String author, String publisher,
 			boolean new_old, String title_kana, String author_kana) {
 		super();
-		this.book_id = book_id;
+		this.id = id;
 		this.isbn = isbn;
 		this.genre_id = genre_id;
 		this.title = title;
@@ -26,11 +29,17 @@ public class Book {
 		this.author_kana = author_kana;
 	}
 	
-	public int getBook_id() {
-		return book_id;
+
+	public Book() {
+		// TODO 自動生成されたコンストラクター・スタブ
 	}
-	public void setBook_id(int book_id) {
-		this.book_id = book_id;
+
+	public int getid() {
+		return id;
+	}
+	public void setid(int id) {
+		this.id = id;
+
 	}
 	public String getIsbn() {
 		return isbn;
